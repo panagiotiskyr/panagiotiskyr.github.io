@@ -1,0 +1,52 @@
+/*
+ * General
+ */
+$background__background-color_body: #000;
+$background__background-color_content: #fff;
+$color__text-color_bright: #92F22A;
+
+/*
+ * Typography
+ */
+$font__font-family_body: "Lora", serif;
+$font__font-family_headers: "Josefin Sans", sans-serif;
+$font__font-family_cursive: "Sacramento", cursive;
+
+/*
+ * Home
+ */
+
+/*
+ * About
+ */
+$color__about-nav: darken( $color__text-color_bright, 10% );
+$background__background-color_about-description: #00BFA5;
+
+/*
+ * Projects
+ */
+$color__projects-title: #333;
+$background__background-color_projects-title: #fff;
+$background__background-color_projects: #424242;
+
+
+/*
+ * Media Queries
+ */
+$xs-max: "only screen and ( max-width: 480px )";
+$xs-only: "only screen and ( max-width: 480px )";
+
+$sm-min: "only screen and ( min-width: 481px )";
+$sm-max: "only screen and ( max-width: 960px )";
+$sm-only: "only screen ( min-width: 481px ) and ( max-width: 960px )";
+
+$md-min: "only screen and ( min-width: 961px )";
+$md-max: "only screen and ( max-width: 1280px )";
+$md-only: "only screen ( min-width: 961px ) and ( max-width: 1280px )";
+
+$lg-min: "only screen and ( min-width: 1281px )";
+$lg-max: "only screen and ( max-width: 1600px )";
+$lg-only: "only screen ( min-width: 1281px ) and ( max-width: 1600px )";
+
+$xl-min: "only screen and ( min-width: 1601px )";
+$xl-only: "only screen and ( min-width: 1601px )";

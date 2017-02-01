@@ -1,0 +1,44 @@
+// Transform
+@mixin transform( $args... ) {
+    -moz-transform: $args;
+    -webkit-transform: $args;
+    -o-transform: $args;
+    -ms-transform: $args;
+    transform: $args;
+}
+
+// Transition
+@mixin transition( $args... ) {
+    -moz-transition: $args;
+    -webkit-transition: $args;
+    -o-transition: $args;
+    -ms-transition: $args;
+    transition: $args;
+}
+
+// Box sizing
+@mixin box-sizing( $boxmodel ) {
+    -webkit-box-sizing: $boxmodel;
+    -moz-box-sizing: $boxmodel;
+    box-sizing: $boxmodel;
+}
+
+// Clear
+@mixin clear( $clear: "both" ) {
+    clear: $clear;
+}
+
+// Center
+@mixin center( $center: "both" ) {
+    @if ( $center == "both" ) {
+        top: 50%;
+        left: 50%;
+        @include transform(translate( -50%, -50% ));
+    } @elseif ( $center == "vertical" ) {
+        top: 50%;
+        @include transform(translateY( -50% ));
+    } @else {
+        left: 50%;
+        @include transform(translateX( -50% ));
+    }
+}
