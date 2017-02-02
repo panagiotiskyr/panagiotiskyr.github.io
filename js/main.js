@@ -55,7 +55,11 @@
 			var targetContentClass = $(this).attr('data-nav-link'),
 				targetContent = $('body').find('section.' + targetContentClass ),
 				targetContentDistFromTop = $(targetContent).offset().top;
-			$('body').animate({
+
+			// $('body, html').stop( true, true ) is used for Firefox.
+			// $(window) and $(body) did not trigger the scrollTop animation the the Mozilla Firefox browser.
+			// The .stop( true, true ) is added so the "animate" function is not run twice.
+			$('body, html').stop( true, true ).animate({
 				scrollTop: targetContentDistFromTop - 20
 			}, 600)
 
@@ -143,11 +147,11 @@
 			$('.about-nav a').removeClass('active');
 			$(this).addClass('active');
 			if ( $('.about .about-content').css( 'float' ) === 'right' ) {
-				$('body').animate({
+				$('body, html').stop( true, true ).animate({
 					scrollTop: targetContentDistFromTop - 40
 				}, 600)
 			} else {
-				$('body').animate({
+				$('body, html').stop( true, true ).animate({
 					scrollTop: targetContent.offset().top - 40 - $('.about .about-nav').outerHeight()
 				}, 600)
 			}
@@ -275,7 +279,7 @@
 				itemToHeight,
 				itemToTop,
 				itemToLeft;
-			if ( $('.grid__custom .item-title').css( 'border-left' )[0] === '0' ) {
+			if ( $('.about .about-content').css( 'float' ) === 'right' ) {
 				itemToWidth  = windowWidth - 80;
 				itemToHeight = windowHeight - 80;
 				itemToTop    = $(window).scrollTop() - itemClicked.offset().top + 40;
@@ -328,7 +332,7 @@
 			event.stopPropagation();
 			var itemClicked = $(this).parents('.project-showing'),
 				itemParent  = itemClicked.parent('.grid__list-item'),
-				itemParentWidth  = itemParent.innerWidth() - 10,
+				itemParentWidth,
 				itemParentHeight = itemParent.innerHeight(),
 				windowWidth  = $(window).width(),
 				windowHeight = $(window).height(),
@@ -336,16 +340,18 @@
 				itemToHeight,
 				itemToTop,
 				itemToLeft;
-			if ( $('.grid__custom .item-title').css( 'border-left' )[0] === '0' ) {
+			if ( $('.about .about-content').css( 'float' ) === 'right' ) {
 				itemToWidth  = windowWidth - 80;
 				itemToHeight = windowHeight - 80;
 				itemToTop    = $(window).scrollTop() - itemParent.offset().top + 40;
 				itemToLeft   = -1 * itemParent.offset().left + 40;
+				itemParentWidth  = itemParent.innerWidth() - 10;
 			} else {
 				itemToWidth  = windowWidth - 60;
 				itemToHeight = windowHeight - 60;
 				itemToTop    = $(window).scrollTop() - itemParent.offset().top + 30;
 				itemToLeft   = -1 * itemParent.offset().left + 30;
+				itemParentWidth  = itemParent.innerWidth();
 			}
 			itemClicked.addClass('loading initial-state').one( 'transitionend', function() {
 				itemClicked.css({
