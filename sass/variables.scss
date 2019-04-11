@@ -8,8 +8,8 @@ $color_menu_ul_li_a: #333;
 $color_menu_ul_li_a__hover_background_color: #f2f2f2;
 
 // DIMENTIONS
-$dim_menu_toggle_width: 3rem;
-$dim_menu_toggle_height: 3rem;
+$dim_menu_toggle_width: 2.7em;
+$dim_menu_toggle_height: 2.7rem;
 $dim_menu_toggle_line_width: $dim_menu_toggle_width * 0.35;
 $dim_menu_toggle_line_height: 1px;
 $dim_menu_toggle_line_distance_between: 0.45rem;
@@ -23,7 +23,7 @@ $fs_menu_ul_h1: 0.7rem;
 $fs_menu_ul_li_a: 1rem; 
 
 // PADDING
-$padding_menu_ul: 2rem 0 ($dim_menu_toggle_height + $pos_menu_toggle_top);
+$padding_menu_ul: 1rem 0 ($dim_menu_toggle_height + $pos_menu_toggle_top);
 $padding_left_menu_ul_li_a: 2rem;
 $padding_right_menu_ul_li_a: 4rem;
 $padding_top_menu_ul_li_a: 0.68rem;

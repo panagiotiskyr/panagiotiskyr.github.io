@@ -15,14 +15,19 @@ function setupMenu() {
 		}
 	}
 	var scrollCheckOn = function() {
-		$(window).on('scroll', function(event) {
-			var scroll = $(window).scrollTop();
-			toggleActive(scroll);	
+		$(document).on('scroll', function(event) {
+			var scroll = $(window).scrollTop() + parseInt($('section').css('padding-bottom')),
+				newTop = $(window).scrollTop();
+			if (lastTop != newTop) {
+				lastTop = newTop;
+				toggleActive(scroll);	
+			}
 		});
 	}
 	var scrollCheckOff = function() {
-		$(window).off('scroll');
+		$(document).off('scroll');
 	}
+	var lastTop = 0;
 	toggleActive($(window).scrollTop());
 	scrollCheckOn();
 	$('#menu-toggle').click(function(event) {
@@ -36,16 +41,42 @@ function setupMenu() {
 		$('body').toggleClass('menu-open');
 		$(event.target).addClass('active');
 	    $([document.documentElement, document.body]).animate({
-	        scrollTop: $(scrollToSection).offset().top + 1
-	    }, 300, function() {
+	        scrollTop: $(scrollToSection).offset().top + 1 - parseInt($(scrollToSection).css('padding-bottom'))
+	    }, 500, function() {
 	    	scrollCheckOn();
 	    });
 	});
+	$('#overlay').click(function(event) {
+		$('body').toggleClass('menu-open');
+	});
 }
-
-$( document ).ready(function() {
+function setupImages() {
+	$('picture').each(function(index, el) {
+		var pic = $(el),
+			img = $(el).find('img'),
+			sectionElement = pic.parent(),
+			sectionRatio   = sectionElement.innerWidth() / sectionElement.innerHeight(),
+			imageRatio  = img.innerWidth() / img.innerHeight();
+		if (sectionRatio >= imageRatio) {
+			pic.removeClass('wide');
+			pic.addClass('long');
+		} else {
+			pic.removeClass('long');
+			pic.addClass('wide');
+		}
+		img.on('load', function(event) {
+			setupImages();
+		});
+	});
+}
+$(document).ready(function() {
 	setupMenu();
+	setupImages();
 	$('a.disabled').click(function(event) {
 		event.preventDefault();
+	});
+	$(window).resize(function(event) {
+		setupMenu();
+		setupImages();
 	});
 });

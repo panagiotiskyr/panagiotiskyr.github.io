@@ -34,20 +34,29 @@
             <div id="menu">
                 <ul>
                     <h1>Anchors</h1>
-                    <li><a href="#about">About me</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experience">Working Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#about" title="About me"><span class="typcn typcn-user-outline"></span>About me</a></li>
+                    <li><a href="#education" title="Education"><span class="typcn typcn-mortar-board"></span>Education</a></li>
+                    <li><a href="#experience" title="Working Experience"><span class="typcn typcn-business-card"></span>Working Experience</a></li>
+                    <li><a href="#projects" title="Projects"><span class="typcn typcn-chart-bar-outline"></span>Projects</a></li>
+                    <li><a href="#certifications" title="Certifications"><span class="typcn typcn-document-text"></span>Certifications</a></li>
                 </ul>
             </div>
             <div id="content">
                 <div id="overlay"></div>
+                <picture>
+                    <source srcset="images/about_bg_480.jpg" media="(max-width: 480px)">
+                    <source srcset="images/about_bg_780.jpg" media="(max-width: 780px)">
+                    <source srcset="images/about_bg_1300.jpg" media="(max-width: 1300px)">
+                    <source srcset="images/about_bg_1900.jpg" media="(max-width: 1900px)">
+                    <source srcset="images/about_bg_full.jpg">
+                    <img src="images/about_bg_full.jpg" alt="Content background">
+                </picture> 
                 <section id="about">
+                    <div class="overlay"></div>
                     <div class="inside">
                         <div class="photo">
                             <div class="wrapper">
-                                <img src="images/me_300px.jpg" alt="">
+                                <img src="images/me_300px.jpg" alt="My photo">
                             </div>
                         </div>
                         <div class="section-content">
@@ -57,8 +66,8 @@
                         </div>
                         <div class="social">
                             <ul>
-                                <li><a href="https://www.linkedin.com/in/pkyriazo/" class="linkedin" target="_blank"><span class="typcn typcn-social-linkedin"></span></a></li>
-                                <li><a href="https://github.com/pkyriazo" class="github" target="_blank"><span class="typcn typcn-social-github"></span></a></li>
+                                <li><a href="https://www.linkedin.com/in/pkyriazo/" class="linkedin" title="LinkedIn profile" target="_blank"><span class="typcn typcn-social-linkedin"></span></a></li>
+                                <li><a href="https://github.com/pkyriazo" class="github" title="Github account" target="_blank"><span class="typcn typcn-social-github"></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -70,10 +79,10 @@
                             <ul>
                                 <li>
                                     <div class="image">
-                                        <img src="https://media.licdn.com/dms/image/C560BAQFwFj7BLvLrjw/company-logo_400_400/0?e=1562803200&v=beta&t=dw6s-5YwLzG5_gZ-eIcfMkFZ20ZFD4SeKxHZYxobToo" alt="">
+                                        <img src="https://media.licdn.com/dms/image/C560BAQFwFj7BLvLrjw/company-logo_400_400/0?e=1562803200&v=beta&t=dw6s-5YwLzG5_gZ-eIcfMkFZ20ZFD4SeKxHZYxobToo" alt="Aristotle University of Thessaloniki Logo">
                                     </div>
                                     <ul>
-                                        <li class="title"><a href="https://www.math.auth.gr/en" target="_blank">Aristotle University of Thessaloniki<span class="typcn typcn-export-outline"></span></a></li>
+                                        <li class="title"><a href="https://www.math.auth.gr/en" title="Aristotle University of Thessaloniki official website" target="_blank">Aristotle University of Thessaloniki<span class="typcn typcn-export-outline"></span></a></li>
                                         <li class="subtitle">Bachelor's Degree in Mathematics</li>
                                         <li class="description">September 2009 - March 2017</li>
                                     </ul>
@@ -89,10 +98,10 @@
                             <ul>
                                 <li>
                                     <div class="image">
-                                        <img src="http://www.onlinesales.gr/el/wp-content/uploads/2014/08/cropped-cropped-logo.png" alt="">
+                                        <img src="http://www.onlinesales.gr/el/wp-content/uploads/2014/08/cropped-cropped-logo.png" alt="Online Sales Logo">
                                     </div>
                                     <ul>
-                                        <li class="title"><a href="http://www.onlinesales.gr/en/" target="_blank">Online Sales<span class="typcn typcn-export-outline"></span></a></li>
+                                        <li class="title"><a href="http://www.onlinesales.gr/en/" title="Online Sales website" target="_blank">Online Sales<span class="typcn typcn-export-outline"></span></a></li>
                                         <li class="subtitle">Sales</li>
                                         <li class="description">October 2015 – January 2016</li>
                                     </ul>
@@ -111,7 +120,7 @@
                                     <p>A responsive website page, build with HTML, CSS and JavaScript using jQuery.</p>
                                     <p>It is hosted on GitHub Pages and you are currently viewing it.</p>
                                     <div class="btn">
-                                        <a href="https://pkyriazo.github.io/" class="disabled" target="_blank">Take a look<span class="typcn typcn-export-outline"></span></a>
+                                        <a href="https://pkyriazo.github.io/" class="disabled" title="Link to project" target="_blank">Take a look<span class="typcn typcn-export-outline"></span></a>
                                     </div>
                                 </li>
                             </ul>
@@ -128,7 +137,7 @@
                                     <p class="institution">Stanford | Online</p>
                                     <p class="completion">November 2014</p>
                                     <div class="btn">
-                                        <a href="https://verify.class.stanford.edu/SOA/14e44253585d4f75a747d93d0551fc0e/" target="_blank">Check certificate<span class="typcn typcn-export-outline"></span></a>
+                                        <a href="https://verify.class.stanford.edu/SOA/14e44253585d4f75a747d93d0551fc0e/" title="Link to certification verification" target="_blank">Check certificate<span class="typcn typcn-export-outline"></span></a>
                                     </div>
                                 </li>
                             </ul>

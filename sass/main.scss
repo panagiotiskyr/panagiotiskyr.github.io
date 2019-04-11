@@ -10,7 +10,7 @@ body {
 }
 a {
 	text-decoration: none;
-	color: #6c5ce7;
+	color: #20639b;
 	&.disabled {
 		color: #bfbfbf;
 		cursor: not-allowed;
@@ -43,7 +43,7 @@ p {
 	bottom: $pos_menu_toggle_top;
 	right: $pos_menu_toggle_right; 
 	background-color: $color_background_menu_toggle;
-	border: 0.1rem solid #e1e1e1;
+	border: 0.15rem solid #868686;
 	border-radius: $des_menu_toggle_border_radius;
 	display: flex;
 	align-items: center;
@@ -130,6 +130,11 @@ p {
 				font-size: $fs_menu_ul_li_a;
 				font-weight: $des_menu_ul_li_a_font_weight;
 				transition: background-color $time_menu_ul_li_a__hover;
+				.typcn {
+					margin-left: 0;
+					margin-right: 1rem;
+					color: #2ecc71;
+				}
 				&:hover,
 				&.active {
 					background-color: $color_menu_ul_li_a__hover_background_color;
@@ -161,40 +166,84 @@ p {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	visibility: hidden;
 	z-index: 999;
-	transition: opacity $time_menu_sliding ease-in-out;
+	transition-property: opacity, visibility;
+	transition-duration: $time_menu_sliding;
+	transition-timing-function: ease-in-out;
 	body.menu-open & {
 		opacity: 0.3;
+		visibility: visible;
 	}
 }
 #content {
 	width: 100%;
+	// background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+	background: #96e6a1;
+	background: -webkit-linear-gradient(120deg, #d4fc79, #96e6a1);
+	background: linear-gradient(120deg, #d4fc79, #96e6a1);
+	picture {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.3;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&.long img {
+			width: 100%;
+			height: auto;
+		}
+		&.wide img {
+			width: auto;
+			height: 100%;
+		}
+	}
 	> section {
-		padding: 0.3rem;
+		position: relative;
+		padding: 0 0.7rem 0.7rem;
 		font-size: 1rem;
+		background-color: transparent;
+		// &:not(:first-of-type) {
+		// 	padding-bottom: 0.7rem;
+		// }
 		.inside {
-			background-color: #fff;
+			background-color: #fafafa;
+			position: relative;
 		}
 		.section-content {
 			padding: 1rem;
 			h2 {
-				margin: 0 0 2rem; 
+				margin: 0 0 1rem; 
 				font-size: 1.1rem;
 			}
 		}
 	}
 	#about {
-		background-color: #EB613D;
+		position: relative;
 		padding-top: 5rem;
+		padding-top: 5rem;
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.6;
+		}
 		.photo {
 			position: relative;
 			top: -4rem;
 			width: 8rem;
 			height: 8rem;
 			margin: auto;
-			border: 0.4rem solid #fff;
+			border: 0.4rem solid #fafafa;
 			border-radius: 100%;
-			box-shadow: 0 -0.1rem 0.3rem 0 rgba(0, 0, 0, 0.25);
 			overflow: hidden;
 			img {
 				position: absolute;
@@ -206,33 +255,37 @@ p {
 		}
 		.section-content {
 			margin-top: -4rem;
+			padding: 1rem 1rem 2rem;
 			h1 {
-				font-size: 1.3rem;
+				font-size: 1.6rem;
+				line-height: 1.35;
 				font-weight: normal;
 				text-align: center;
-				margin: 0 0 0.4rem;
+				margin: 0 0 0.7rem;
 				color: #333;
 			}
 			h2 {
-				font-size: 1.1rem;
-				font-weight: 600;
+				font-size: 1.2rem;
+				font-weight: 700;
 				text-align: center;
 				margin: 0 0 2rem;
 				color: #000;
 			}
 			p {
 				margin-bottom: 0;
+				padding: 0 0.8rem;
 			}
 		}
 		.social {
 			ul {
-				padding: 0 1rem 1rem;
+				display: flex;
+				justify-content: center;
 				margin: 0;
+				padding: 1rem 1.5rem 1.5rem;
+				background-color: #f0f0f0;
 				list-style: none;
-			    display: flex;
-			    justify-content: center;
 			    .typcn {
-			    	font-size: 1.8rem;
+			    	font-size: 1.9rem;
 			    	margin-left: 0;
 			    }
 			    a {
@@ -242,23 +295,27 @@ p {
 		    	    width: 2.5rem;
     				height: 2.5rem;
 				    border-radius: 0.3rem;
-				    background-color: #f2f2f2;
+				    color: #fff;
+				    border: 0.2rem solid #fff;
+				    box-shadow: 0.0625rem 0.125rem 0.1875rem 0 rgba(0, 0, 0, 0.25);
 				    &.linkedin {
-				    	color: #0077B5;
+				    	background-color: #0077B5;
 				    }
 				    &.github {
-				    	color: #333;
+				    	background-color: #1b1f23;
 				    }
 			    }
-			    li:not(:first-child) a {
-			    	margin-left: 1rem;
+			    li {
+			    	display: inline-block;
+			    	&:not(:first-child) {
+			    		margin-left: 1rem;
+			    	}
 			    }
 			}
 		}
 	}
 	#education, 
 	#experience {
-		background-color: #00cec9;
 		.section-content {
 			ul {
 				padding: 0;
@@ -266,21 +323,21 @@ p {
 				list-style: none;
 			}
 			ul ul {
-				padding: 0 0 0 1rem;
+				padding: 0 0 0 1.5rem;
 			}
 			ul ul li {
 				&.title {
 					margin-bottom: 0.35rem;
-					font-size: 0.8rem;
+					font-size: 1rem;
 				}
 				&.subtitle {
 					color: #555;
-					font-size: 0.85rem;
+					font-size: 1rem;
 					font-weight: 800;
 				}
 				&.description {
 					color: #9f9f9f;
-					font-size: 0.75rem;
+					font-size: 0.85rem;
 					margin-top: 0.45rem;
 				}
 			}
@@ -302,6 +359,8 @@ p {
 					}
 				}
 				.image {
+					display: flex;
+					align-items: center;
 					width: 3rem;
 					height: 3rem;
 					overflow: hidden;
@@ -315,12 +374,8 @@ p {
 			}
 		}
 	}
-	#experience {
-		background-color: #f6e58d;
-	}
 	#projects,
 	#certifications {
-		background-color: #95afc0;
 		.section-content {
 			ul {
 				padding: 0;
@@ -334,17 +389,16 @@ p {
 					&::after {
 						content: "";
 						position: absolute;
-						width: 50%;
+						width: 25%;
 						height: 1px;
 						bottom: -1rem;
-						left: 25%;
-						background-color: #ececec;
+						left: 0;
+						background-color: #e0e0e0;
 					}
 				}
 				h3 {
-					font-size: 1.1rem;
+					font-size: 0.9rem;
 					color: #333;
-					margin: 0 0 0.8rem 0;
 				}
 				p {
 					margin: 0.5rem 0; 
@@ -365,22 +419,39 @@ p {
 			}
 		}
 	}
-	#certifications {
-		background-color: #95afc0;
+	#projects {
 		.section-content {
 			& > ul > li {
-				.title {
-					font-size: 0.9rem;
-					color: #333;
-					margin: 0 0 0.1rem 0;
+				h3 {
+					margin: 0 0 0.3rem 0;
+					display: inline-block;
+					padding: 0.2rem 0.3rem;
+					background-color: #f6d55c;
+					color: #000;
+				}
+				p {
+					margin: 0.5rem 0;
+					&:first-of-type {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+	#certifications {
+		.section-content {
+			& > ul > li {
+				h3 {
+					margin: 0 0 0.2rem 0;
+					font-size: 1rem;
 				}
 				.institution {
-					margin: 0 0 0.1rem 0;
-					font-size: 0.85rem;
+					margin: 0 0 0.2rem 0;
+					font-size: 0.9rem;
 				}
 				.completion {
 					margin: 0;
-					font-size: 0.75rem;
+					font-size: 0.8rem;
 					color: #999;
 				}
 			}
@@ -389,9 +460,10 @@ p {
 }
 
 #footer {
+	position: relative;
 	background-color: #000;
 	text-align: center;
-    padding: 1rem 1rem 6rem;
+    padding: 2rem 1rem 6rem;
 	h4 {
 		margin: 0 0 0.5rem 0;
 		font-size: 1rem;
