@@ -4,12 +4,19 @@ body {
 	font-family: 'Muli', sans-serif;
 	background-color: $color_background_body;
 	overflow-x: hidden;
+	&.menu-open {
+		overflow-y: hidden;
+	}
 }
 a {
 	text-decoration: none;
 	color: #6c5ce7;
 	&.disabled {
 		color: #bfbfbf;
+		cursor: not-allowed;
+		&:hover {
+			background-color: inherit !important;
+		}
 	}
 }
 p {
@@ -146,6 +153,20 @@ p {
 // 
 // CONTENT
 //
+#overlay {
+	background-color: #000;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	transition: opacity $time_menu_sliding ease-in-out;
+	body.menu-open & {
+		opacity: 0.3;
+	}
+}
 #content {
 	width: 100%;
 	> section {
@@ -338,6 +359,9 @@ p {
 			    text-align: center;
 			    border: 1px solid #d0d0d0;
 			    border-radius: 0.3rem;
+			    &:hover {
+			    	background-color: #f6f6f6;
+			    }
 			}
 		}
 	}

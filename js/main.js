@@ -33,6 +33,7 @@ function setupMenu() {
 		var scrollToSection = $(this).attr('href');
 		scrollCheckOff();
 		$('#menu > ul > li > a').removeClass('active');
+		$('body').toggleClass('menu-open');
 		$(event.target).addClass('active');
 	    $([document.documentElement, document.body]).animate({
 	        scrollTop: $(scrollToSection).offset().top + 1
