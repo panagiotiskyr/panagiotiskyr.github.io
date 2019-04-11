@@ -463,7 +463,8 @@ p {
   position: relative;
   background-color: #000;
   text-align: center;
-  padding: 2rem 1rem 6rem; }
+  padding: 2rem 1rem 6rem;
+  z-index: 1; }
   #footer h4 {
     margin: 0 0 0.5rem 0;
     font-size: 1rem;
