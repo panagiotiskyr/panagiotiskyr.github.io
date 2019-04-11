@@ -1,0 +1,46 @@
+// COLORS
+$color_background_body: #f4f4f4;
+$color_background_menu: #fff;
+$color_background_menu_toggle: #fff;
+$color_background_menu_toggle_line: #333;
+$color_menu_ul_h1: #aaa; 
+$color_menu_ul_li_a: #333;
+$color_menu_ul_li_a__hover_background_color: #f2f2f2;
+
+// DIMENTIONS
+$dim_menu_toggle_width: 3rem;
+$dim_menu_toggle_height: 3rem;
+$dim_menu_toggle_line_width: $dim_menu_toggle_width * 0.35;
+$dim_menu_toggle_line_height: 1px;
+$dim_menu_toggle_line_distance_between: 0.45rem;
+
+// POSITIONS
+$pos_menu_toggle_top: 1rem;
+$pos_menu_toggle_right: $pos_menu_toggle_top;
+
+// FONT SIZE
+$fs_menu_ul_h1: 0.7rem;
+$fs_menu_ul_li_a: 1rem; 
+
+// PADDING
+$padding_menu_ul: 2rem 0 ($dim_menu_toggle_height + $pos_menu_toggle_top);
+$padding_left_menu_ul_li_a: 2rem;
+$padding_right_menu_ul_li_a: 4rem;
+$padding_top_menu_ul_li_a: 0.68rem;
+$padding_bottom_menu_ul_li_a: $padding_top_menu_ul_li_a;
+$padding_menu_ul_h1: $padding_top_menu_ul_li_a $padding_right_menu_ul_li_a 0.4rem $padding_left_menu_ul_li_a; 
+
+// DESIGN
+$des_menu_ul_li_a_font_weight: 400;
+$des_menu_toggle_border_radius: 0.3rem;
+$des_menu_box_shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.15);
+
+// TIMING
+$time_menu_sliding: 0.3s;
+$time_menu_ul_sliding: $time_menu_sliding * 0.5;
+$time_menu_ul_sliding_delay: 0.1s;
+$time_menu_toggle: $time_menu_sliding;
+$time_menu_ul_li_a__hover: 0.2s; 
+
+
+

@@ -1,308 +1,144 @@
-<!-- 
-
-
-    ╔╗─╔╦═══╦╗──╔╗──╔═══╗╔╗
-    ║║─║║╔══╣║──║║──║╔═╗║║║
-    ║╚═╝║╚══╣║──║║──║║─║║║║
-    ║╔═╗║╔══╣║─╔╣║─╔╣║─║║╚╝
-    ║║─║║╚══╣╚═╝║╚═╝║╚═╝║╔╗
-    ╚╝─╚╩═══╩═══╩═══╩═══╝╚╝
-
-
- -->
-
-
 <!doctype html>
-<html lang="">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Panagiotis Kyriazopoulos</title>
+<html class="no-js" lang="">
+    <head>
+        <title>Kyriazopoulos Panagiotis - Eleftherios</title>
+        <meta charset="utf-8">
 
-    <!-- Disable tap highlight on IE -->
-    <meta name="msapplication-tap-highlight" content="no">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Text Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Lora|Sacramento" rel="stylesheet">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
 
-    <!-- Icon Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css" rel="stylesheet">
 
-    <!-- Main styles -->
-    <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
 
-</head>
-    <body class="overflow__hidden">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/main.js"></script>
 
-        <div class="loading-page-overlay">
-            <div class="loading-anim">
-                <div class="sk-cube-grid">
-                    <div class="sk-cube sk-cube1"></div>
-                    <div class="sk-cube sk-cube2"></div>
-                    <div class="sk-cube sk-cube3"></div>
-                    <div class="sk-cube sk-cube4"></div>
-                    <div class="sk-cube sk-cube5"></div>
-                    <div class="sk-cube sk-cube6"></div>
-                    <div class="sk-cube sk-cube7"></div>
-                    <div class="sk-cube sk-cube8"></div>
-                    <div class="sk-cube sk-cube9"></div>
+        <meta name="theme-color" content="#fafafa">
+    </head>
+
+    <body>
+        <div id="main-wrapper">
+            <div id="menu-toggle">
+                <div class="icon">
+                    <div class="line"></div>
                 </div>
             </div>
-        </div>
-
-        <div class="window-border"></div>
-        <div class="content">
-            <header class="top-bar">
-                <div class="main-nav__wrapper">
-                    <div class="nav-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <nav class="main-nav">
-                        <ul class="main-nav__list">
-                            <li><a href="#" data-nav-link="home">Home</a></li>
-                            <li><a href="#" data-nav-link="about">About</a></li>
-                            <li><a href="#" data-nav-link="projects">Projects</a></li>
-                            <li><a href="#" data-nav-link="contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-            <main>
-                <section class="section home background__cover background__center background__add-overlay picture-container">
-                    <div class="background__image">
-                        <img srcset="images/home_960px.jpg 960w,
-                                     images/home_1600px.jpg 1600w,
-                                     images/home.jpg 4000w"
-                             sizes="(max-width: 960px) 720px,
-                                    (max-width: 1600px) 1440px,
-                                    4000px"
-                             src="images/home.jpg">
-                    </div>
-                    <div class="home-content padding__2x">
-                        <h2 class="site-description text__center margin__none margin__top_4x margin__bottom">Front-End<br/>Web Developer</h2>
-                        <h1 class="site-title text__center margin__top_4x margin__bottom_6x">Panagiotis<br/>Kyriazopoulos</h1>
-                        <nav class="secondary-nav">
-                            <ul class="list__horizontal text__center">
-                                <li><a href="#" data-nav-link="home">Home</a></li>
-                                <li><a href="#" data-nav-link="about">About</a></li>
-                                <li><a href="#" data-nav-link="projects">Projects</a></li>
-                                <li><a href="#" data-nav-link="contact">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </section>
-                <section class="section about">
-                    <div class="section__description">
-                        <div class="about-picture__wrapper">
-                            <div class="about-picture__border picture-container">
-                                <div class="about-picture">
-                                    <div class="background__image">
-                                        <img srcset="images/me_300px.jpg 300w,
-                                                     images/me.jpg, 813w"
-                                             sizes="(max-width: 960px) 300px,
-                                                    900px"
-                                             src="images/me.jpg">
-                                    </div>
-                                </div>
-                                <span class="display__block margin__vertical">Me!</span>
+            <div id="menu">
+                <ul>
+                    <h1>Anchors</h1>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Working Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                </ul>
+            </div>
+            <div id="content">
+                <section id="about">
+                    <div class="inside">
+                        <div class="photo">
+                            <div class="wrapper">
+                                <img src="https://raw.githubusercontent.com/pkyriazo/panagiotiskyr.github.io/master/images/me_300px.jpg" alt="">
                             </div>
                         </div>
-                        <div class="section__description-title text__center margin__vertical">
-                            <span>Let's get <br/>to know each other.</span>
+                        <div class="section-content">
+                            <h1>Panagiotis E. Kyriazopoulos</h1>
+                            <h2>Mathematician</h2>
+                            <p>Hello, my name is what and I am a Mathematician currently studying to be a Certified Actuary.</p>
+                        </div>
+                        <div class="social">
+                            <ul>
+                                <li><a href="https://www.linkedin.com/in/pkyriazo/" class="linkedin" target="_blank"><span class="typcn typcn-social-linkedin"></span></a></li>
+                                <li><a href="https://github.com/pkyriazo" class="github" target="_blank"><span class="typcn typcn-social-github"></span></a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="section__content about-content">
-                        <nav class="about-nav">
+                </section>
+                <section id="education">
+                    <div class="inside">
+                        <div class="section-content">
+                            <h2>Education</h2>
                             <ul>
                                 <li>
-                                    <a href="#" class="active" data-link="general">
-                                        <i class="zmdi zmdi-account-circle"></i>
-                                        <span>General</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" data-link="education">
-                                        <i class="zmdi zmdi-assignment"></i>
-                                        <span>Education</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" data-link="right-now">
-                                        <i class="zmdi zmdi-calendar-check"></i>
-                                        <span>Now!</span>
-                                    </a>
+                                    <div class="image">
+                                        <img src="https://media.licdn.com/dms/image/C560BAQFwFj7BLvLrjw/company-logo_400_400/0?e=1562803200&v=beta&t=dw6s-5YwLzG5_gZ-eIcfMkFZ20ZFD4SeKxHZYxobToo" alt="">
+                                    </div>
+                                    <ul>
+                                        <li class="title"><a href="https://www.math.auth.gr/en" target="_blank">Aristotle University of Thessaloniki<span class="typcn typcn-export-outline"></span></a></li>
+                                        <li class="subtitle">Bachelor's Degree in Mathematics</li>
+                                        <li class="description">September 2009 - March 2017</li>
+                                    </ul>
                                 </li>
                             </ul>
-                        </nav>
-                        <div class="general">
-                            <h3>General</h3>
-                            <div class="about-content__section">
-                                <span>
-                                    Let's talk about me!
-                                </span>
-                            </div>
-                        </div>
-                        <div class="education">
-                            <h3>Education</h3>
-                            <div class="about-content__section">
-                                <span>
-                                    A few things about my education.
-                                </span>
-                            </div>
-                        </div>
-                        <div class="right-now">
-                            <h3>What I'm working on right now!</h3>
-                            <div class="about-content__section">
-                                <span>
-                                    Well? What about it.
-                                </span>
-                            </div>
                         </div>
                     </div>
                 </section>
-                <section class="section projects">
-                    <div class="container">                    
-                        <div class="grid__custom clearfix">
-                            <div class="section__title">
-                                <span>Projects</span>
-                            </div>
-
-                            <div class="grid__list grid__list-big">
-                                <ul>
-                                    <li class="grid__list-item">
-                                        <div class="">
-                                            <div class="item-overlay"></div>
-                                            <span class="item-close"><i class="zmdi zmdi-close zmdi-hc-2x"></i></span>
-                                            <div class="item-image background__image">
-                                                <img srcset="images/projects/personal_website_960px.png 960w,
-                                                             images/projects/personal_website.png 1347w"
-                                                     sizes="(max-width: 960px) 960px,
-                                                            1300px"
-                                                     src="images/projects/personal_website.png">
-                                            </div>
-                                            <div class="item-content">
-                                                <h3 class="item-title">Personal Website</h3>
-                                                <span class="item-description">
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                    Some things to say about the project...
-                                                </span>
-                                            </div>
-                                            <div class="item-visit">
-                                                <a href="#">View Project</a>
-                                            </div>
-                                            <div class="grid__list-item-visible-overlay"></div>
-                                            <div class="grid__list-item-loading-transition"><i class="zmdi zmdi-rotate-right zmdi-hc-spin zmdi-hc-4x"></i></div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="grid__list grid__list-small">
-                                <ul>
-                                </ul>
-                            </div>
+                <section id="experience">
+                    <div class="inside">
+                        <div class="section-content">
+                            <h2>Experience</h2>
+                            <ul>
+                                <li>
+                                    <div class="image">
+                                        <img src="http://www.onlinesales.gr/el/wp-content/uploads/2014/08/cropped-cropped-logo.png" alt="">
+                                    </div>
+                                    <ul>
+                                        <li class="title"><a href="http://www.onlinesales.gr/en/" target="_blank">Online Sales<span class="typcn typcn-export-outline"></span></a></li>
+                                        <li class="subtitle">Sales</li>
+                                        <li class="description">October 2015 – January 2016</li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </section>
-                <section class="section contact picture-container">
-                    <div class="background__image">
-                        <img srcset="images/contact_960px.jpg 960w,
-                                     images/contact_1600px.jpg 1600w,
-                                     images/contact.jpg 4000w"
-                             sizes="(max-width: 960px) 960px,
-                                    (max-width: 1600px) 1600px,
-                                    40000px"
-                             src="images/contact.jpg">
-                    </div>
-                    <div class="contact-form-wrapper">
-                        <div class="section__title">
-                            <span>Contact</span>
+                <section id="projects">
+                    <div class="inside">
+                        <div class="section-content">
+                            <h2>Projects</h2>
+                            <ul>
+                                <li>
+                                    <h3>Personal Website</h3>
+                                    <p>A responsive website page, build with HTML, CSS and JavaScript using jQuery.</p>
+                                    <p>It is hosted on GitHub Pages and you are currently viewing it.</p>
+                                    <div class="btn">
+                                        <a href="https://pkyriazo.github.io/" class="disabled" target="_blank">Take a look<span class="typcn typcn-export-outline"></span></a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="section__description">
-                            Interested in working together? Fill out the form below with as much information as you can and I will get back to you in the next couple of days!
-                        </div>
-                        <div class="contact-form-content">
-                            <form class="clearfix" id="contact-form" action="" method="POST">
-                                <div>
-                                    <label for="name">Name * :</label>
-                                    <input type="text" tabindex="1" id="name" name="name" required>
-                                </div>
-                                <div>
-                                    <label for="email">Email * :</label>
-                                    <input type="email" tabindex="2" id="email" name="email" required>
-                                </div>
-                                <div>
-                                    <label for="website">Website :</label>
-                                    <input type="url" tabindex="3" id="website" name="website">
-                                </div>
-                                <div>
-                                    <label for="budget">Budget ( $ ) :</label>
-                                    <input type="number" tabindex="4" id="budget" name="budget">
-                                </div>
-                                <div>
-                                    <label for="deadline">Deadline ( dd/mm/yy ) :</label>
-                                    <input type="datetime" tabindex="5" id="deadline" name="deadline">
-                                </div>
-                                <div class="test-input">
-                                    <label for="test"></label>
-                                    <input type="number" tabindex="6" id="test" name="test" required>
-                                </div>
-                                <div class="form-msg-wrapper">
-                                    <label for="message">Tell me a little about your project :</label>
-                                    <textarea rows="6" tabindex="7" id="message" name="message" required></textarea>
-                                </div>
-                                <div class="submit-btn-wrapper">
-                                        <button name="submit" type="submit" tabindex="8" id="contact-form-submit">Send Message</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="form-submit-message"></div>
                     </div>
                 </section>
-                <footer>
-                    <p>Copyright © <span></span> Panagiotis Kyriazopoulos.</p>
-                </footer>
-            </main>
+                <section id="certifications">
+                    <div class="inside">
+                        <div class="section-content">
+                            <h2>Certifications</h2>
+                            <ul>
+                                <li>
+                                    <h3 class="title">Computer Science 101</h3>
+                                    <p class="institution">Stanford | Online</p>
+                                    <p class="completion">November 2014</p>
+                                    <div class="btn">
+                                        <a href="https://verify.class.stanford.edu/SOA/14e44253585d4f75a747d93d0551fc0e/" target="_blank">Check certificate<span class="typcn typcn-export-outline"></span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="footer">
+                <h4>Panagiotis E. Kyriazopoulos</h4>
+                <p>Thank you for visiting my personal website</p>
+            </div>
         </div>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="/js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     </body>
 </html>

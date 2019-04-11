@@ -1,24 +1,19 @@
 {
-  "name": "menu",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "",
-  "license": "ISC",
-  "homepage": "",
-  "devDependencies": {
-    "bower": "^1.7.9",
-    "gulp": "^3.9.1",
-    "gulp-connect": "^3.2.2",
-    "gulp-sass": "^2.2.0",
-    "gulp-sourcemaps": "^1.6.0"
-  },
-  "dependencies": {},
-  "description": ""
+	"name": "personalwebsite",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"prefix-css": "postcss css/main.css --use autoprefixer -d css/",
+		"compress-css": "node-sass css/main.css css/main.css --output-style compressed",
+		"watch-sass": "node-sass sass/main.scss css/main.css --watch",
+		"compile-sass": "node-sass sass/main.scss css/main.css"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "^9.5.1",
+		"node-sass": "^4.11.0",
+		"postcss-cli": "^6.1.2"
+	}
 }
