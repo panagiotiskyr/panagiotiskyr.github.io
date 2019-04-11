@@ -60,8 +60,14 @@ p {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	opacity: 1;
+	visibility: visible;
 	box-shadow: 0 0 0.3rem -0.1rem rgba(0, 0, 0, 0.15);
 	z-index: 99999;
+	transition-property: opacity, visibility;
+	transition-duration: 0.8s;
+	transition-delay: 0.6s;
+	transition-timing-function: ease-in-out;
 	.icon {
 		line-height: 0;
 	}
@@ -190,6 +196,7 @@ p {
 	transition-duration: 0.8s;
 	transition-delay: 0.6s;
 	transition-timing-function: ease-in-out;
+	z-index: 9999;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -565,6 +572,7 @@ p {
 	background-color: #000;
 	text-align: center;
     padding: 2rem 1rem 6rem;
+    z-index: 1;
 	h4 {
 		margin: 0 0 0.5rem 0;
 		font-size: 1rem;

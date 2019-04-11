@@ -45,8 +45,14 @@ p {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  opacity: 1;
+  visibility: visible;
   box-shadow: 0 0 0.3rem -0.1rem rgba(0, 0, 0, 0.15);
-  z-index: 99999; }
+  z-index: 99999;
+  transition-property: opacity, visibility;
+  transition-duration: 0.8s;
+  transition-delay: 0.6s;
+  transition-timing-function: ease-in-out; }
   #menu-toggle .icon {
     line-height: 0; }
   #menu-toggle .line {
@@ -146,7 +152,8 @@ p {
   transition-property: opacity, visibility;
   transition-duration: 0.8s;
   transition-delay: 0.6s;
-  transition-timing-function: ease-in-out; }
+  transition-timing-function: ease-in-out;
+  z-index: 9999; }
   body.loading #loading {
     opacity: 1;
     visibility: visible; }
