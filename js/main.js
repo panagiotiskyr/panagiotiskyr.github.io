@@ -1,4 +1,17 @@
 
+function removeLoading() {
+	console.log('removeLoading');
+	$('#content > section').each(function(indexSection, section) {
+		var sectionHeight = $(section).innerHeight();
+		$('#loading ul li').each(function(indexLoadingItem, el) {
+			if (indexSection == indexLoadingItem) {
+				console.log($(el).find('.content'))
+				$(el).find('.content').css('height', sectionHeight);
+			}
+		});
+	});
+	$('body').removeClass('loading')
+}
 function setupMenu() {
 	function toggleActive(scroll) {
 		$('#menu > ul > li > a').removeClass('active');
@@ -70,6 +83,7 @@ function setupImages() {
 	});
 }
 $(document).ready(function() {
+	console.log('ready');
 	setupMenu();
 	setupImages();
 	$('a.disabled').click(function(event) {
@@ -78,5 +92,9 @@ $(document).ready(function() {
 	$(window).resize(function(event) {
 		setupMenu();
 		setupImages();
+	});
+	$(window).on('load', function(event) {
+		console.log('load');
+		removeLoading();
 	});
 });
