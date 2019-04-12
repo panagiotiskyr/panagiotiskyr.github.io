@@ -1,11 +1,9 @@
 
 function removeLoading() {
-	console.log('removeLoading');
 	$('#content > section').each(function(indexSection, section) {
 		var sectionHeight = $(section).innerHeight();
 		$('#loading ul li').each(function(indexLoadingItem, el) {
 			if (indexSection == indexLoadingItem) {
-				console.log($(el).find('.content'))
 				$(el).find('.content').css('height', sectionHeight);
 			}
 		});

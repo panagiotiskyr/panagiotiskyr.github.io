@@ -169,10 +169,10 @@ p {
     position: relative;
     display: block;
     width: calc(100% - 2rem);
-    margin: 1rem;
+    margin: 0.7rem;
     padding: 0;
     background-color: #fff;
-    box-shadow: 0.0625rem 0.125rem 0.325rem 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0.0625rem 0.125rem 0.325rem 0 rgba(0, 0, 0, 0.15);
     opacity: 1;
     transition: opacity 0.8s ease-in-out; }
     #loading li:not(:first-of-type) {
@@ -302,11 +302,11 @@ p {
       margin-top: -4rem;
       padding: 1rem 1rem 2rem; }
       #content #about .section-content h1 {
-        font-size: 1.6rem;
+        font-size: 1.45rem;
         line-height: 1.35;
         font-weight: normal;
         text-align: center;
-        margin: 0 0 0.7rem;
+        margin: 0 0 0.3rem;
         color: #333; }
       #content #about .section-content h2 {
         font-size: 1.2rem;
@@ -355,8 +355,8 @@ p {
     padding: 0 0 0 1.5rem; }
   #content #education .section-content ul ul li.title,
   #content #experience .section-content ul ul li.title {
-    margin-bottom: 0.35rem;
-    font-size: 1rem; }
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem; }
   #content #education .section-content ul ul li.subtitle,
   #content #experience .section-content ul ul li.subtitle {
     color: #555;
@@ -366,7 +366,7 @@ p {
   #content #experience .section-content ul ul li.description {
     color: #9f9f9f;
     font-size: 0.85rem;
-    margin-top: 0.45rem; }
+    margin-top: 0.35rem; }
   #content #education .section-content > ul > li,
   #content #experience .section-content > ul > li {
     display: flex;
