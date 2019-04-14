@@ -42,6 +42,7 @@ function setupMenu() {
 	toggleActive($(window).scrollTop());
 	scrollCheckOn();
 	$('#menu-toggle').click(function(event) {
+		event.stopPropagation();
 		$('body').toggleClass('menu-open');
 	});
 	$('#menu a').click(function(event) {
@@ -94,8 +95,8 @@ $(document).ready(function() {
 		setupMenu();
 		setupImages();
 	});
-	$(window).on('load', function(event) {
-		console.log('load');
-		removeLoading();
-	});
+});
+$(window).on('load', function(event) {
+	console.log('load');
+	removeLoading();
 });
