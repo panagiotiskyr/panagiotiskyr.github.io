@@ -10,7 +10,7 @@ function removeLoading() {
     $('#loading').scrollTop($(window).scrollTop());
 	$('body').removeClass('loading')
 }
-function setupMenu() {
+function setupMenu(windowResized = false) {
 	function toggleActive(scroll) {
 		$('#menu > ul > li > a').removeClass('active');
 		if (scroll > $('#certifications').offset().top) {
@@ -38,29 +38,37 @@ function setupMenu() {
 	var scrollCheckOff = function() {
 		$(document).off('scroll');
 	}
-	var lastTop = 0;
 	toggleActive($(window).scrollTop());
-	scrollCheckOn();
-	$('#menu-toggle').click(function(event) {
-		event.stopPropagation();
-		$('body').toggleClass('menu-open');
-	});
-	$('#menu a').click(function(event) {
-		event.preventDefault();
-		var scrollToSection = $(this).attr('href');
-		scrollCheckOff();
-		$('#menu > ul > li > a').removeClass('active');
-		$('body').toggleClass('menu-open');
-		$(event.target).addClass('active');
-	    $([document.documentElement, document.body]).animate({
-	        scrollTop: $(scrollToSection).offset().top + 1 - parseInt($(scrollToSection).css('padding-bottom'))
-	    }, 500, function() {
-	    	scrollCheckOn();
-	    });
-	});
-	$('#overlay').click(function(event) {
-		$('body').toggleClass('menu-open');
-	});
+	if (!windowResized) {
+		var lastTop = 0;
+		isMobile() ? null : $('body').removeClass('menu-open');
+		console.log('setupMenu')
+		scrollCheckOn();
+		$('#menu-toggle').click(function(event) {
+			console.log('menu-toggle')
+			console.log(event.target)
+			event.stopPropagation();
+			isMobile() ? $('body').toggleClass('menu-open') : null;
+		});
+		$('#menu a').click(function(event) {
+			event.preventDefault();
+			var scrollToSection = $(this).attr('href');
+			scrollCheckOff();
+			$('#menu > ul > li > a').removeClass('active');
+			isMobile() ? $('body').toggleClass('menu-open') : null;
+			console.log('menu a')
+			$(event.target).addClass('active');
+		    $([document.documentElement, document.body]).animate({
+		        scrollTop: $(scrollToSection).offset().top + 1 - parseInt($(scrollToSection).css('padding-bottom'))
+		    }, 500, function() {
+		    	scrollCheckOn();
+		    });
+		});
+		$('#overlay').click(function(event) {
+			event.stopPropagation();
+			$('body').toggleClass('menu-open');
+		});
+	}
 }
 function setupImages() {
 	$('picture').each(function(index, el) {
@@ -81,18 +89,20 @@ function setupImages() {
 		});
 	});
 }
+function isMobile() {
+	console.log($('#menu-toggle').css('display') != 'none')
+	return $('#menu-toggle').css('display') != 'none';
+}
+
 $(document).ready(function() {
 	console.log('ready');
-    // $('#loading').animate({
-    //     scrollTop: $(window).scrollTop()
-    // }, 500);
 	setupMenu();
 	setupImages();
 	$('a.disabled').click(function(event) {
 		event.preventDefault();
 	});
 	$(window).resize(function(event) {
-		setupMenu();
+		setupMenu(true);
 		setupImages();
 	});
 });
