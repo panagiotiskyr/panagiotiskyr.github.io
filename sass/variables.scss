@@ -1,46 +1,111 @@
-// COLORS
-$color_background_body: #f4f4f4;
-$color_background_menu: #fff;
-$color_background_menu_toggle: #fff;
-$color_background_menu_toggle_line: #333;
-$color_menu_ul_h1: #aaa; 
-$color_menu_ul_li_a: #333;
-$color_menu_ul_li_a__hover_background_color: #f2f2f2;
+// BODY
+$body_background-color: #f4f4f4;
 
-// DIMENTIONS
-$dim_menu_toggle_width: 2.7em;
-$dim_menu_toggle_height: 2.7rem;
-$dim_menu_toggle_line_width: $dim_menu_toggle_width * 0.35;
-$dim_menu_toggle_line_height: 1px;
-$dim_menu_toggle_line_distance_between: 0.45rem;
+// MENU TOGGLE
+$menu_toggle_z-index: 99999;
+$menu_toggle_width: 2.7rem;
+$menu_toggle_height: 2.7rem;
+$menu_toggle_line_width: $menu_toggle_width * 0.35;
+$menu_toggle_line_height: 1px;
+$menu_toggle_line_distance_between: 0.45rem;
+$menu_toggle_bottom: 1rem;
+$menu_toggle_right: $menu_toggle_bottom;
+$menu_toggle_background-color: #fff;
+$menu_toggle_background-color_line: #333;
+$menu_toggle_border-width: 0.15rem;
+$menu_toggle_border-color: #868686;
+$menu_toggle_border-radius: 0.3rem;
+$menu_toggle_box-shadow: 0 0 0.3rem -0.1rem rgba(0, 0, 0, 0.15);
+$menu_toggle_transition-duration: 0.8s;
+$menu_toggle_transition-delay: 0.4s;
+$menu_toggle_line_transition-duration: 0.15s;
 
-// POSITIONS
-$pos_menu_toggle_top: 1rem;
-$pos_menu_toggle_right: $pos_menu_toggle_top;
+// MENU
+$menu_z-index: 9999;
+$menu_background-color: #fff;
+$menu_box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.15);
+$menu_transition-duration: 0.3s;
+$menu_h1_font-size: 0.7rem;
+$menu_h1_padding: 2rem 2rem 0.4rem 2rem;
+$menu_h1_color: #aaa;
+$menu_ul_padding: 1rem 0 ($menu_toggle_height + $menu_toggle_bottom);
+$menu_ul_sliding_transition-duration: $menu_transition-duration * 0.5;
+$menu_ul_sliding_transition-delay: 0.1s;
+$menu_a_font-size: 1rem;
+$menu_a_font-weight: 400;
+$menu_a_color: #333;
+$menu_a_padding-left: 2rem;
+$menu_a_padding-right: 4rem;
+$menu_a_padding-top: 0.68rem;
+$menu_a_padding-bottom: $menu_a_padding-top;
+$menu_a_hover_color: #f2f2f2;
+$menu_a_hover_transition-duration: 0.2s;
+$menu_a_icon_color: #2ecc71;
+$menu_a_icon_margin-right: 1rem;
 
-// FONT SIZE
-$fs_menu_ul_h1: 0.7rem;
-$fs_menu_ul_li_a: 1rem; 
+// OVERLAY MAIN
+$overlay_z-index: 999;
+$overlay_background-color: #000;
+$overlay_opacity: 0.3;
 
-// PADDING
-$padding_menu_ul: 1rem 0 ($dim_menu_toggle_height + $pos_menu_toggle_top);
-$padding_left_menu_ul_li_a: 2rem;
-$padding_right_menu_ul_li_a: 4rem;
-$padding_top_menu_ul_li_a: 0.68rem;
-$padding_bottom_menu_ul_li_a: $padding_top_menu_ul_li_a;
-$padding_menu_ul_h1: $padding_top_menu_ul_li_a $padding_right_menu_ul_li_a 0.4rem $padding_left_menu_ul_li_a; 
+// CONTENT
+$content_background-image_opacity: 0.3;
+$content_background-color_from: #d4fc79;
+$content_background-color_to: #96e6a1;
+$content_section_padding: 0.7rem;
+$content_section_font-size: 1rem;
+$content_section_inside_background-color: #fafafa;
+$content_section_inside_padding: 1rem;
+$content_section_inside_title_font-size: 1.1rem;
+$content_section_inside_title_margin-bottom: 1rem;
 
-// DESIGN
-$des_menu_ul_li_a_font_weight: 400;
-$des_menu_toggle_border_radius: 0.3rem;
-$des_menu_box_shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.15);
+	// ABOUT
+	$content_about_padding-top: 5rem;
+	$content_about_photo_width: 8rem;
+	$content_about_photo_height: $content_about_photo_width;
+	$content_about_photo_border-width: 0.4rem;
+	$content_about_text_padding: 1rem 1rem 2rem;
+	$content_about_h1_color: #333;
+	$content_about_h1_font-size: 1.45rem;
+	$content_about_h1_font-weight: normal;
+	$content_about_h1_line-height: 1.35;
+	$content_about_h1_margin: 0 0 0.3rem;
+	$content_about_h2_color: #000;
+	$content_about_h2_font-size: 1.2rem;
+	$content_about_h2_font-weight: 700;
+	$content_about_h2_margin: 0 0 2rem;
+	$content_about_p_margin-bottom: 0;
+	$content_about_p_padding: 0 0.8rem;
+	$content_about_social_background-color: #f0f0f0;
+	$content_about_social_padding: 1rem 1.5rem 1.5rem;
+	$content_about_social_icon_color: #fff;
+	$content_about_social_icon_font-size: 1.9rem;
+	$content_about_social_btn_width: 2.5rem;
+	$content_about_social_btn_height: $content_about_social_btn_width;
+	$content_about_social_btn_border-width: 0.2rem;
+	$content_about_social_btn_border-radius: 0.3rem;
+	$content_about_social_btn_margin-left: 1rem;
+	$content_about_social_btn_box-shadow: 0.0625rem 0.125rem 0.1875rem 0 rgba(0, 0, 0, 0.25);
+	$content_about_social_btn_background-color_linkedin: #0077B5;
+	$content_about_social_btn_background-color_github: #1b1f23;
 
-// TIMING
-$time_menu_sliding: 0.3s;
-$time_menu_ul_sliding: $time_menu_sliding * 0.5;
-$time_menu_ul_sliding_delay: 0.1s;
-$time_menu_toggle: $time_menu_sliding;
-$time_menu_ul_li_a__hover: 0.2s; 
+
+// LOADING OVERLAY
+$loading_z-index: 9999999;
+$loading_background-color: #fafafa;
+$loading_transition-duration: $menu_toggle_transition-duration;
+$loading_transition-delay: $menu_toggle_transition-delay;
+$loading_list_item_initial_height: 10rem;
+$loading_list_item_margin: $content_section_padding;
+$loading_list_item_background-color: #fff;
+$loading_list_item_box-shadow: 0.0625rem 0.125rem 0.325rem 0 rgba(0, 0, 0, 0.15);
+$loading_list_item_transition-duration: $loading_transition-duration;
+$loading_list_item_first-of-type_margin-top: $content_about_padding-top;
+$loading_list_item_header_initial_height: $loading_list_item_initial_height * 0.25;
+$loading_list_item_header_background-color: #ececec;
+$loading_list_item_first-of-type_image_width: $content_about_photo_width;
+$loading_list_item_first-of-type_image_height: $loading_list_item_first-of-type_image_width;
+$loading_list_item_first-of-type_image_border-width: $content_about_photo_border-width;
 
 
 

@@ -1,13 +1,13 @@
-
 function removeLoading() {
-	$('#content > section').each(function(indexSection, section) {
+	$('#content > section > .inside').each(function(indexSection, section) {
 		var sectionHeight = $(section).innerHeight();
 		$('#loading ul li').each(function(indexLoadingItem, el) {
 			if (indexSection == indexLoadingItem) {
-				$(el).find('.content').css('height', sectionHeight);
+				$(el).css('height', sectionHeight + 'px');
 			}
 		});
 	});
+    $('#loading').scrollTop($(window).scrollTop());
 	$('body').removeClass('loading')
 }
 function setupMenu() {
@@ -82,6 +82,9 @@ function setupImages() {
 }
 $(document).ready(function() {
 	console.log('ready');
+    // $('#loading').animate({
+    //     scrollTop: $(window).scrollTop()
+    // }, 500);
 	setupMenu();
 	setupImages();
 	$('a.disabled').click(function(event) {
