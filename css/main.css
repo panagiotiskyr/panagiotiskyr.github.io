@@ -233,9 +233,9 @@ p {
 
 #content {
   width: 100%;
-  background: #96e6a1;
-  background: -webkit-linear-gradient(120deg, #d4fc79, #96e6a1);
-  background: linear-gradient(120deg, #d4fc79, #96e6a1); }
+  background: #2D142C;
+  background: -webkit-linear-gradient(120deg, #4AB19D, #2D142C);
+  background: linear-gradient(120deg, #4AB19D, #2D142C); }
   #content picture {
     position: fixed;
     top: 0;
