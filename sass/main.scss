@@ -203,12 +203,14 @@ p {
 	right: 0;
 	width: 100%;
 	height: auto;
-	background: $menu_background-color_to;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top, $menu_background-color_from, $menu_background-color_to);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top, $menu_background-color_from, $menu_background-color_to); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	max-height: 100%;
+	background: $menu_background-color_to;
+	background: -webkit-linear-gradient(to top, $menu_background-color_from, $menu_background-color_to);
+	background: linear-gradient(to top, $menu_background-color_from, $menu_background-color_to);
 	opacity: 0;	
 	box-shadow: $menu_box-shadow;
 	visibility: hidden;
+	overflow: auto;
 	z-index: -1;
 	transform: translateY(20%);
 	transition: transform $menu_transition-duration $menu_ul_sliding_transition-delay ease-in-out, opacity $menu_transition-duration $menu_ul_sliding_transition-delay ease-in-out, visibility $menu_transition-duration $menu_ul_sliding_transition-delay ease-in-out, z-index 0s #{$menu_transition-duration + $menu_ul_sliding_transition-delay};
@@ -320,6 +322,8 @@ p {
 		.inside {
 			background-color: $content_section_inside_background-color;
 			position: relative;
+			max-width: 60rem;
+		    margin: 0 0 0 auto;
 		}
 		.section-content {
 			padding: $content_section_inside_padding;
@@ -570,6 +574,11 @@ p {
 	    color: #bdbdbd;
 	    margin: 0;
 	}
+	h4, 
+	p {
+		max-width: 60rem;
+	    margin: 0 0 0 auto;
+	}
 }
 
 
@@ -584,8 +593,6 @@ p {
 		top: 0;
 		right: 0;
 		transform: translate(0, 0);
-		overflow: auto;
-		// box-shadow: inset 3.125rem 0 3.125rem -3.125rem rgba(0, 0, 0, 0.35);
 	}
 	#menu, 
 	#menu ul {
@@ -594,7 +601,6 @@ p {
 		visibility: visible;
 	}
 	#menu ul li a {
-		// transition: background-color $menu_a_hover_transition-duration, box-shadow $menu_a_hover_transition-duration;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
 		padding-left: 3rem;
@@ -602,10 +608,6 @@ p {
 		    font-size: 1.2rem;
 		    margin-right: 1.4rem;
 		}
-		// &:hover,
-		// &.active {
-		// 	box-shadow: inset 3.125rem 0 3.125rem -3.125rem rgba(0, 0, 0, 0.35);
-		// }
 	}
 	#content {
 		#about {

@@ -167,15 +167,14 @@ p {
   right: 0;
   width: 100%;
   height: auto;
-  background: #FFEEEE;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #DDEFBB, #FFEEEE);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #DDEFBB, #FFEEEE);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  max-height: 100%;
+  background: #fff;
+  background: -webkit-linear-gradient(to top, #ECE9E6, #fff);
+  background: linear-gradient(to top, #ECE9E6, #fff);
   opacity: 0;
   box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.15);
   visibility: hidden;
+  overflow: auto;
   z-index: -1;
   transform: translateY(20%);
   transition: transform 0.3s 0.1s ease-in-out, opacity 0.3s 0.1s ease-in-out, visibility 0.3s 0.1s ease-in-out, z-index 0s 0.4s; }
@@ -267,7 +266,9 @@ p {
     background-color: transparent; }
     #content > section .inside {
       background-color: #fafafa;
-      position: relative; }
+      position: relative;
+      max-width: 60rem;
+      margin: 0 0 0 auto; }
     #content > section .section-content {
       padding: 1rem; }
       #content > section .section-content h2 {
@@ -462,6 +463,10 @@ p {
     font-size: 0.9rem;
     color: #bdbdbd;
     margin: 0; }
+  #footer h4,
+  #footer p {
+    max-width: 60rem;
+    margin: 0 0 0 auto; }
 
 @media screen and (min-width: 61.25rem) {
   #menu-toggle {
@@ -471,8 +476,7 @@ p {
     height: 100%;
     top: 0;
     right: 0;
-    transform: translate(0, 0);
-    overflow: auto; }
+    transform: translate(0, 0); }
   #menu,
   #menu ul {
     opacity: 1;
