@@ -440,12 +440,12 @@ p {
     border-radius: 0.3rem; }
     #content #projects .section-content .btn a:hover,
     #content #certifications .section-content .btn a:hover {
-      background-color: #f6f6f6; }
+      background-color: #f2f2f2; }
   #content #projects .section-content > ul > li h3 {
     margin: 0 0 0.3rem 0;
     display: inline-block;
     padding: 0.2rem 0.3rem;
-    background-color: #96ff99;
+    background-color: #f1f9df;
     color: #000; }
   #content #projects .section-content > ul > li p {
     margin: 0.5rem 0; }
