@@ -4,6 +4,10 @@
   to {
     left: 120%; } }
 
+html,
+body {
+  height: 100%; }
+
 body {
   font-family: 'Muli', sans-serif;
   background-color: #f4f4f4;
@@ -61,6 +65,7 @@ p {
     width: calc(100% - 1.4rem);
     height: 10rem;
     margin: 0 0.7rem 0.7rem 0.7rem;
+    max-width: 60rem;
     padding: 0;
     background-color: #fff;
     box-shadow: 0.0625rem 0.1875rem 0.625rem 0 rgba(0, 0, 0, 0.25);
@@ -193,7 +198,8 @@ p {
     transform: translateY(20%);
     transition: transform 1.5s, opacity 0.15s 0s; }
     #menu ul li a {
-      display: block;
+      display: flex;
+      align-items: center;
       position: relative;
       text-decoration: none;
       padding: 0.68rem 4rem 0.68rem 2rem;
@@ -236,11 +242,18 @@ p {
     visibility: visible;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
 
+#main-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
 #content {
   width: 100%;
   background: #96e6a1;
   background: -webkit-linear-gradient(120deg, #d4fc79, #96e6a1);
-  background: linear-gradient(120deg, #d4fc79, #96e6a1); }
+  background: linear-gradient(120deg, #d4fc79, #96e6a1);
+  flex-grow: 1; }
   #content picture {
     position: fixed;
     top: 0;
@@ -432,7 +445,7 @@ p {
     margin: 0 0 0.3rem 0;
     display: inline-block;
     padding: 0.2rem 0.3rem;
-    background-color: #f6d55c;
+    background-color: #96ff99;
     color: #000; }
   #content #projects .section-content > ul > li p {
     margin: 0.5rem 0; }
@@ -512,8 +525,10 @@ p {
   #content,
   #loading {
     padding: 1rem; }
-  #loading li:first-of-type {
-    margin-top: 6.5rem; }
+  #loading li {
+    margin-left: auto; }
+    #loading li:first-of-type {
+      margin-top: 6.5rem; }
   #loading .image {
     top: -5.6rem;
     width: 10.4rem;

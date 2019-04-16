@@ -11,6 +11,10 @@
 }
 
 // GENERAL
+html,
+body {
+	height: 100%;
+}
 body {
 	font-family: 'Muli', sans-serif;
 	background-color: $body_background-color;
@@ -77,6 +81,7 @@ p {
 		width: calc(100% - #{2 * $loading_list_item_margin});
 		height: $loading_list_item_initial_height;
 		margin: 0 $loading_list_item_margin $loading_list_item_margin $loading_list_item_margin;
+		max-width: 60rem;
 		padding: 0;
 		background-color: $loading_list_item_background-color;
 	    box-shadow: $loading_list_item_box-shadow;
@@ -231,7 +236,8 @@ p {
 		transition: transform #{$menu_ul_sliding_transition-duration * 10}, opacity $menu_ul_sliding_transition-duration 0s;
 		li {
 			a {
-				display: block;
+				display: flex;
+				align-items: center;
 				position: relative;
 				text-decoration: none;
 				padding: $menu_a_padding-top $menu_a_padding-right $menu_a_padding-bottom $menu_a_padding-left;
@@ -287,11 +293,18 @@ p {
 }
 
 // CONTENT
+#main-wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
 #content {
 	width: 100%;
 	background: $content_background-color_to;
 	background: -webkit-linear-gradient(120deg, $content_background-color_from, $content_background-color_to);
 	background: linear-gradient(120deg, $content_background-color_from, $content_background-color_to);
+	flex-grow: 1;
 	picture {
 		position: fixed;
 		top: 0;
@@ -525,7 +538,7 @@ p {
 					margin: 0 0 0.3rem 0;
 					display: inline-block;
 					padding: 0.2rem 0.3rem;
-					background-color: #f6d55c;
+					background-color: #96ff99;
 					color: #000;
 				}
 				p {
@@ -645,6 +658,7 @@ p {
 	}
 	#loading {
 		li {
+	    	margin-left: auto;
 		    &:first-of-type {
 		    	margin-top: $loading_list_item_first-of-type_margin-top * 1.3;
 		    }
