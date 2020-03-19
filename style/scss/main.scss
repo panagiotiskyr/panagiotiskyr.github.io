@@ -19,9 +19,14 @@ a {
     }
 }
 
+.ui-loader {
+    display: none;
+}
+
 body {
     font-family: 'Alegreya Sans', sans-serif;
     overflow-x: hidden;
+    touch-action: none;
     &.main-menu-open {
         overflow-y: hidden;
     }
@@ -117,7 +122,7 @@ body {
     padding: 5rem 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-2rem);
+    transform: translateX(2rem);
     transition: all 0.1s ease-in-out;
     li.active {
         border-left: 1rem solid #fff;
@@ -137,7 +142,9 @@ body {
     }
 }
 main {
-    padding-top: 2rem;
+    padding-top: 4rem;
+    max-width: 50rem;
+    margin: auto;
 }
 section {
     padding: 1.5rem;
@@ -168,9 +175,9 @@ section {
     }
     .subheader {
         margin: 1.5rem 0 0.5rem;
-        color: #666;
-        text-decoration: underline;
+        color: #cacaca;
         font-size: 1.1rem;
+        font-weight: 600;
     }
     .table {
         ul {
@@ -268,9 +275,18 @@ section {
                 border: 1px solid #999;
                 margin-top: 0.5rem;
                 margin-bottom: 1.5rem;
-                &:focus,
-                &:active {
+                &:hover {
+                    outline: 4px solid #F2ED6F;
                     border-color: transparent;
+                }
+                body:not(.using-mouse) & {
+                    &:focus {
+                        outline: 4px solid #F2ED6F;
+                    }
+                    &:focus,
+                    &:active {
+                        border-color: transparent;
+                    }
                 }
             }
         }
@@ -290,3 +306,66 @@ footer {
         margin-bottom: 0.5rem;
     }
 }
+
+@media only screen and (min-width: 1078px) {
+    #menu-toggle {
+        display: none;
+    }
+    #main-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        height: auto;
+        padding: 0;
+        ul {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            li {
+                &.active {
+                    border: none;
+                    a {
+                        background-color: #fff;
+                        color: #333;
+                        position: relative;
+                        &::before { 
+                            content: "";
+                            position: absolute;
+                            left: -0.3rem;
+                            bottom: -0.3rem;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #93C2BC;
+                            z-index: -1;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: transparent;
+                            border: 4px solid #333;
+                        }
+                    }
+                }
+                &:not(.active) a:hover {
+                    color: #b0fff5;
+                }
+            }
+            a {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    main {
+        padding-top: 7rem;
+    }
+    footer .container {
+        max-width: 50rem;
+        margin: auto;
+        padding: 1rem;
+    }
+}
+

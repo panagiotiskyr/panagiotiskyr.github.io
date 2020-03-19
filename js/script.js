@@ -1,23 +1,28 @@
 (() => {
     const updateMenuActiveLink = () => {
         $('#main-menu ul li').removeClass('active');
-        if ($(document).scrollTop() >= $('#certifications').offset().top) {
+        if ($(document).scrollTop() + (isBiggerScreen ? 70 : 0) >= $('#certifications').offset().top) {
             $('#main-menu-certifications').addClass('active');
-        } else if ($(document).scrollTop() >= $('#experience').offset().top) {
+        } else if ($(document).scrollTop() + (isBiggerScreen ? 70 : 0) >= $('#experience').offset().top) {
             $('#main-menu-experience').addClass('active');
-        } else if ($(document).scrollTop() >= $('#education').offset().top) {
+        } else if ($(document).scrollTop() + (isBiggerScreen ? 70 : 0) >= $('#education').offset().top) {
             $('#main-menu-education').addClass('active');
         } else {
             $('#main-menu-home').addClass('active');
         }
     }
     let documentScrollTopBeforeMenuOpen = 0;
+    let isBiggerScreen;
     
     $(window).on('load', () => {
         $('#overlay').removeClass('visible');
         updateMenuActiveLink();
         $(document).scroll(() => {
             updateMenuActiveLink();
+        });
+        isBiggerScreen = $('#menu-toggle').css('display') === 'none';
+        $(window).resize(() => {
+            isBiggerScreen = $('#menu-toggle').css('display') === 'none';
         });
     });
     
@@ -37,24 +42,24 @@
         let scrollTopValue;
         switch (linkTarget) {
             case 'main-menu-home':
-            scrollTopValue = 0;
-            break;
+                scrollTopValue = 0;
+                break;
             
             case 'main-menu-education':
-            scrollTopValue = $('#education').offset().top + 1;
-            break;
+                scrollTopValue = $('#education').offset().top + (isBiggerScreen ? (-69) : 1);
+                break;
             
             case 'main-menu-experience':
-            scrollTopValue = $('#experience').offset().top + 1;
-            break;
+                scrollTopValue = $('#experience').offset().top + (isBiggerScreen ? (-69) : 1);
+                break;
             
             case 'main-menu-certifications':
-            scrollTopValue = $('#certifications').offset().top + 1;
-            break;
+                scrollTopValue = $('#certifications').offset().top + (isBiggerScreen ? (-69) : 1);
+                break;
             
             default:
-            scrollTopValue = 0;
-            break;
+                scrollTopValue = 0;
+                break;
         }
         
         $('body').removeClass('main-menu-open');
@@ -68,6 +73,13 @@
     });
     $('body').keydown(() => {
         $('body').removeClass('using-mouse');
+    });
+    
+    $('body').on('swipeleft', () => {
+        if (!$('body').hasClass('main-menu-open')) $('body').addClass('main-menu-open');
+    });
+    $('body').on('swiperight', () => {
+        if ($('body').hasClass('main-menu-open')) $('body').removeClass('main-menu-open');
     });
     
 })();

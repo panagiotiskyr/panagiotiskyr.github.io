@@ -31,7 +31,7 @@
         }
     </script>
 </head>
-<body class="page">
+<body>
     <div id="overlay" class="visible">
         <div class="spinner">
             <div class="spinner-icon"></div>
@@ -57,7 +57,7 @@
     <main>
         <section id="front-page">
             <header>
-                <p>I'm Panagiotis <br/>Kyriazopoulos, <br/>a Full Stack Web and Blockchain Developer in Greece</p>
+                <p>Hello, I'm Panagiotis Kyriazopoulos, <br/>a Full Stack Web and Blockchain Developer in Greece</p>
             </header>
             <div class="social">
                 <ul>
@@ -184,11 +184,20 @@
         </section>
     </main>
     <footer>
-        <h5>Panagiotis E. Kyriazopoulos</h5>
-        <p>Thank you for visiting my personal website</p>
+        <div class="container">
+            <h5>Panagiotis E. Kyriazopoulos</h5>
+            <p>Thank you for visiting my personal website</p>
+        </div>
     </footer>
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).bind("mobileinit", function(){
+            $.event.special.swipe.horizontalDistanceThreshold = 90;
+            // $.event.special.swipe.verticalDistanceThreshold = 70;
+        });
+    </script>
+    <script src="http://code.jquery.com/mobile/1.5.0-rc1/jquery.mobile-1.5.0-rc1.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -15,6 +15,7 @@ self.addEventListener('install', (installEvent) => {
                 '/style/css/main.css',
                 '/js/script.js',
                 'https://code.jquery.com/jquery-3.4.1.min.js',
+                'http://code.jquery.com/mobile/1.5.0-rc1/jquery.mobile-1.5.0-rc1.min.js',
                 '/images/icons/icon-72x72.png',
                 '/images/icons/icon-96x96.png',
                 '/images/icons/icon-128x128.png',
