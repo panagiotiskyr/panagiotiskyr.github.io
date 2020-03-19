@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Panagiotis Kyriazopoulos Personal Website</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Panagiotis Kyriazopoulos's personal website.">
+    
+    <link rel="stylesheet" href="style/css/normalize.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/css/main.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/icons/icon-128x128.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icons/icon-512x512.png">
+    <link rel="apple-touch-icon" type="image/png" href="images/icons/icon-512x512.png">
+    
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('serviceWorker.js')
+            .then(() => {
+                console.log('Service worker registered successfully.');
+            })
+            .catch((error) => {
+                console.log('Service workker registration error:', (error && error.message) ? error.message : error);
+            });
+        } else {
+            console.log('Service Worker is not supported.')
+        }
+    </script>
+</head>
+<body class="page">
+    <div id="overlay" class="visible">
+        <div class="spinner">
+            <div class="spinner-icon"></div>
+        </div>
+    </div>
+    <a href="#" id="menu-toggle"></a>
+    <menu id="main-menu">
+        <ul>
+            <li id="main-menu-home" class="active">
+                <a href="#">Home</a>
+            </li>
+            <li id="main-menu-education">
+                <a href="#">Education</a>
+            </li>
+            <li id="main-menu-experience">
+                <a href="#">Experience</a>
+            </li>
+            <li id="main-menu-certifications">
+                <a href="#">Certifications</a>
+            </li>
+        </ul>
+    </menu>
+    <main>
+        <article id="front-page">
+            <header>
+                <p>I'm Panagiotis <br/>Kyriazopoulos, <br/>a Full Stack Web and Blockchain Developer in Greece</p>
+            </header>
+            <div class="social">
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/pkyriazo/" id="link-linkedin" target="_blank" title="LinkedIn Profile"></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/pkyriazo" id="link-github" target="_blank" title="Github Profile"></a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article id="education">
+            <header>
+                <h2>Education</h2>
+            </header>
+            <div class="table">
+                <ul>
+                    <li>
+                        <a href="https://www.math.auth.gr/en" target="_blank" title="AUTH Official Webpage" class="sup">
+                            Aristotle University of Thessaloniki (AUTH)
+                            <i class="las la-external-link-alt"></i>
+                        </a>
+                        <span>School of Mathematics <span class="text-faded">Bacheclor's</span></span>
+                        <span class="sub">September 2009 – March 2017</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="subheader">Further Education</div>
+            <div class="table">
+                <ul>
+                    <li>
+                        <a href="https://www.actuaries.org.gr/" target="_blank" title="Hellenic Actuarial Society Official Webpage" class="sup">
+                            Hellenic Actuarial Society
+                            <i class="las la-external-link-alt"></i>
+                        </a>
+                        <span>Actuarial Mathematics</span>
+                        <span class="sub">March 2018 - (Ongoing)</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="subheader">MOOCs</div>
+            <div class="table">
+                <ul>
+                    <li>
+                        <span>Machine Learning  <span class="text-faded">Stanford | Coursera</span></span>
+                    </li>
+                    <li>
+                        <span>Databases and SQL for Data Science  <span class="text-faded">IBM | Coursera</span></span>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article id="experience">
+            <header>
+                <h2>Experience</h2>
+            </header>
+            <div class="table">
+                <ul>
+                    <li>
+                        <a href="http://eunice-group.com/" target="_blank" title="Eunice Energy Group Official Webpage" class="sup">
+                            Eunice Energy Group
+                            <i class="las la-external-link-alt"></i>
+                        </a>
+                        <span>Software Engineer - Blockchain Developer</span>
+                        <span class="sub">July 2019 - (Ongoing)</span>
+                    </li>
+                    <li>
+                        <span class="sup">Self Employed</span>
+                        <span>Mathematics Tutor</span>
+                        <span class="sub">March 2016 – May 2017</span>
+                    </li>
+                    <li>
+                        <a href="http://www.onlinesales.gr/en/" target="_blank" title="Online Sales Official Webpage" class="sup">
+                            Online Sales
+                            <i class="las la-external-link-alt"></i>
+                        </a>
+                        <span>Sales</span>
+                        <span class="sub">October 2015 – January 2016</span>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article id="certifications">
+            <header>
+                <h2>Certifications</h2>
+            </header>
+            <div class="table">
+                <ul>
+                    <li>
+                        <span class="sup">Lynda.com | LinkedIn Learning</span>
+                        <span>Agile Software Development: Creating an Agile Culture</span>
+                        <a href="#" class="button">
+                            Check Certificate
+                            <i class="las la-external-link-alt"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="sup">Lynda.com | LinkedIn Learning</span>
+                        <span>Node.js: Securing RESTful APIs</span>
+                        <a href="#" class="button">
+                            Check Certificate
+                            <i class="las la-external-link-alt"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="sup">Lynda.com | LinkedIn Learning</span>
+                        <span>Blockchain for Developers: Hyperledger Fabric on Azure</span>
+                        <a href="#" class="button">
+                            Check Certificate
+                            <i class="las la-external-link-alt"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="sup">Lynda.com | LinkedIn Learning</span>
+                        <span>Securing Cryptocurrencies</span>
+                        <a href="#" class="button">
+                            Check Certificate
+                            <i class="las la-external-link-alt"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <h5>Panagiotis E. Kyriazopoulos</h5>
+        <p>Thank you for visiting my personal website</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
