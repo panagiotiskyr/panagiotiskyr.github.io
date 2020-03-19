@@ -1,10 +1,9 @@
 {
-    "name": "Panagiotis Kyriazopoulos",
-    "short_name": "PKyriazopoulos",
+    "name": "Panagiotis Kyriazopoulos - Full Stack and Blockchain Developer",
+    "short_name": "Panagiotis Kyriazopoulos",
     "theme_color": "#93C2BC",
     "background_color": "#616263",
-    "display": "standalone",
-    "orientation": "portrait",
+    "display": "fullscreen",
     "start_url": "/",
     "icons": [
         {
