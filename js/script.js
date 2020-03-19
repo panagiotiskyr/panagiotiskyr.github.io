@@ -75,10 +75,10 @@
         $('body').removeClass('using-mouse');
     });
     
-    $('body').on('swipeleft', () => {
+    $('main').on('swipeleft', () => {
         if (!$('body').hasClass('main-menu-open')) $('body').addClass('main-menu-open');
     });
-    $('body').on('swiperight', () => {
+    $('#main-menu').on('swiperight', () => {
         if ($('body').hasClass('main-menu-open')) $('body').removeClass('main-menu-open');
     });
     

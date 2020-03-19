@@ -23,10 +23,12 @@ body.using-mouse a:focus {
 .ui-loader {
   display: none; }
 
+.ui-page:focus {
+  outline: none; }
+
 body {
   font-family: 'Alegreya Sans', sans-serif;
-  overflow-x: hidden;
-  touch-action: none; }
+  overflow-x: hidden; }
   body.main-menu-open {
     overflow-y: hidden; }
 
