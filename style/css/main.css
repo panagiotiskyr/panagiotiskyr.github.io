@@ -17,11 +17,14 @@ ul {
 a:focus {
   outline: 4px solid #F2ED6F; }
 
-a:active {
+body.using-mouse a:focus {
   outline: none; }
 
 body {
-  font-family: 'Alegreya Sans', sans-serif; }
+  font-family: 'Alegreya Sans', sans-serif;
+  overflow-x: hidden; }
+  body.main-menu-open {
+    overflow-y: hidden; }
 
 #overlay {
   position: fixed;
@@ -127,21 +130,21 @@ body {
 main {
   padding-top: 2rem; }
 
-article {
+section {
   padding: 1.5rem; }
-  article header {
+  section header {
     color: #333;
     margin-bottom: 1.5rem; }
-    article header h2,
-    article header p {
+    section header h2,
+    section header p {
       margin: 0; }
-    article header h2 {
+    section header h2 {
       display: inline-block;
       position: relative;
       padding: 0.5rem 1rem;
       border: 4px solid #333;
       background-color: #fff; }
-      article header h2::before {
+      section header h2::before {
         content: "";
         position: absolute;
         left: -0.5rem;
@@ -150,48 +153,48 @@ article {
         height: 100%;
         background-color: #93C2BC;
         z-index: -1; }
-  article .subheader {
+  section .subheader {
     margin: 1.5rem 0 0.5rem;
     color: #666;
     text-decoration: underline;
     font-size: 1.1rem; }
-  article .table ul li {
+  section .table ul li {
     display: block; }
-    article .table ul li > * {
+    section .table ul li > * {
       display: block; }
-    article .table ul li:not(:last-of-type) {
+    section .table ul li:not(:last-of-type) {
       margin-bottom: 1rem; }
-    article .table ul li a {
+    section .table ul li a {
       text-decoration: none; }
-    article .table ul li span {
+    section .table ul li span {
       font-size: 1.2rem;
       color: #333;
       font-weight: 500; }
-    article .table ul li .sup {
+    section .table ul li .sup {
       font-weight: 400;
       color: #E3B23C;
       margin-bottom: 0.2rem; }
-    article .table ul li .sub {
+    section .table ul li .sub {
       color: #999;
       font-weight: 300;
       margin-top: 0.1rem; }
-    article .table ul li .text-faded {
+    section .table ul li .text-faded {
       color: #999;
       font-weight: 400; }
-    article .table ul li .sup,
-    article .table ul li .sub {
+    section .table ul li .sup,
+    section .table ul li .sub {
       font-size: 0.9rem; }
-  article#front-page header {
+  section#front-page header {
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.35; }
-  article#front-page .social {
+  section#front-page .social {
     padding: 0.5rem 0 0; }
-    article#front-page .social ul {
+    section#front-page .social ul {
       display: flex; }
-    article#front-page .social li:not(:last-of-type) {
+    section#front-page .social li:not(:last-of-type) {
       margin-right: 1rem; }
-    article#front-page .social a {
+    section#front-page .social a {
       display: inline-block;
       position: relative;
       color: #333;
@@ -201,28 +204,28 @@ article {
       height: 3.5rem;
       font-size: 2.5rem;
       border: 4px solid #333; }
-      article#front-page .social a:focus, article#front-page .social a:hover {
+      section#front-page .social a:focus, section#front-page .social a:hover {
         border-color: #93C2BC;
         outline: none; }
-      article#front-page .social a::after {
+      section#front-page .social a::after {
         content: "\f0e1";
         font-family: 'Line Awesome Brands';
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
-      article#front-page .social a#link-linkedin::after {
+      section#front-page .social a#link-linkedin::after {
         content: "\f0e1"; }
-      article#front-page .social a#link-github::after {
+      section#front-page .social a#link-github::after {
         content: "\f09b"; }
-  article#certifications .table a.button {
+  section#certifications .table a.button {
     padding: 0.3rem;
     text-align: center;
     color: #666;
     border: 1px solid #999;
     margin-top: 0.5rem;
     margin-bottom: 1.5rem; }
-    article#certifications .table a.button:focus, article#certifications .table a.button:active {
+    section#certifications .table a.button:focus, section#certifications .table a.button:active {
       border-color: transparent; }
 
 footer {

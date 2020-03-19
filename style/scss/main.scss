@@ -14,13 +14,17 @@ a {
     &:focus {
         outline: 4px solid #F2ED6F;
     }
-    &:active {
+    body.using-mouse &:focus {
         outline: none;
     }
 }
 
 body {
     font-family: 'Alegreya Sans', sans-serif;
+    overflow-x: hidden;
+    &.main-menu-open {
+        overflow-y: hidden;
+    }
 }
 #overlay {
     position: fixed;
@@ -135,7 +139,7 @@ body {
 main {
     padding-top: 2rem;
 }
-article {
+section {
     padding: 1.5rem;
     header {
         color: #333;
